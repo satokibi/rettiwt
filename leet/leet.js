@@ -15,9 +15,9 @@ window.onload = function() {
 
 
   leet.tweet_button.addEventListener("click", function() {
-    window.open('https://twitter.com/share?text='+ encodeURIComponent(leet.leet_text.innerHTML + '\nLeet speak Translator\n'), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+    //window.open('https://twitter.com/share?text='+ encodeURIComponent(leet.leet_text.innerHTML + '\nLeet speak Translator\n'), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
 
-    //window.open('https://twitter.com/intent/tweet?text=hello', '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n') + '&url=' + encodeURIComponent(location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
   });
 };
 
