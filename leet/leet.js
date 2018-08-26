@@ -71,6 +71,10 @@ function to_leet(ch) {
     '8': ['B'],
     '9': ['P'],
   };
+  
+  ch = ch.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+    return String.fromCharCode(s.charCodeAt(0) - 65248);
+  });
 
   let ch_upper = ch.toUpperCase();
   if(ch_upper in leet){
