@@ -19,8 +19,10 @@ window.onload = function() {
 
     // window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n') + '&url=' + encodeURIComponent(location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
     
-     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+
   });
+
 };
 
 function str_to_leet(str) {
@@ -38,28 +40,28 @@ function str_to_leet(str) {
 function to_leet(ch) {
   let leet = {'A': ['4', '@', '/'],
     'B': ['|3','8'],
-    'C': ['&lt;', '(', '['],
+    'C': ['(', '['],
     'D': ['|)', ')'],
-    'E': ['3', '&amp;'],
+    'E': ['3',],
     'F': ['|=', 'ph', '/='], 
     'G': ['6', '9', '[,'],
     'H': ['#', '|-|', '9#'],
     'I': ['1', '!', '|'],
     'J': ['_|', '_/'],
-    'K': ['|&lt;', 'X'],
+    'K': ['X'],
     'L': ['1', '|'],
     'M': ['|v|', 'AA', '|/|'],
     'N': ['||', '^/'],
     'O': ['0', '()', '[]'],
     'P': ['|*', '|o'],
-    'Q': ['&lt;|', '(_,)', '()_'],
+    'Q': ['(_,)', '()_'],
     'R': ['|2', '12'],
     'S': ['5', '$'],
     'T': ['7', '+'],
     'U': ['(_)', '|_|'],
     'V': ['/', '|/'],
     'W': ['//', 'vv', 'uu'],
-    'X': ['&gt;&lt;', '}{'],
+    'X': ['}{'],
     'Y': ['j', '7'],
     'Z': ['2', '7_'],
     '0': ['O', 'D'],
