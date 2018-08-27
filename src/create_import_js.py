@@ -22,7 +22,6 @@ def create_import_js(write_file, read_file_path):
         wfile.write("document.write(html);\n")
         wfile.write('}\n\n')
 
-
 if __name__ == '__main__':
     write_file = 'import.js'
 
