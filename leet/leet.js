@@ -1,45 +1,4 @@
-let leet = {};
-
 window.onload = function() {
-  leet.leet_ch = {'A': ['4', '@', '/'],
-    'B': ['|3','8'],
-    'C': ['(', '['],
-    'D': ['|)', ')'],
-    'E': ['3',],
-    'F': ['|=', 'ph', '/='], 
-    'G': ['6', '9', '[,'],
-    'H': ['#', '|-|', '9#'],
-    'I': ['1', '!', '|'],
-    'J': ['_|', '_/'],
-    'K': ['X'],
-    'L': ['1', '|'],
-    'M': ['|v|', 'AA', '|/|'],
-    'N': ['||', '^/'],
-    'O': ['0', '()', '[]'],
-    'P': ['|*', '|o'],
-    'Q': ['(_,)', '()_'],
-    'R': ['|2', '12'],
-    'S': ['5', '$'],
-    'T': ['7', '+'],
-    'U': ['(_)', '|_|'],
-    'V': ['/', '|/'],
-    'W': ['//', 'vv', 'uu'],
-    'X': ['}{'],
-    'Y': ['j', '7'],
-    'Z': ['2', '7_'],
-    '0': ['O', 'D'],
-    '1': ['I', 'L'],
-    '2': ['Z'],
-    '3': ['E'],
-    '4': ['h', 'A'],
-    '5': ['S'],
-    '6': ['b', 'G'],
-    '7': ['T', 'L', 'j'],
-    '8': ['B'],
-    '9': ['P'],
-  };
-
-
   leet.form = document.forms.form_leet;
   leet.leet_text = document.getElementById("leet_text");
   leet.tweet_button = document.getElementById("tweet_button");
@@ -54,36 +13,7 @@ window.onload = function() {
 
 
   leet.tweet_button.addEventListener("click", function() {
-    //window.open('https://twitter.com/share?text='+ encodeURIComponent(leet.leet_text.innerHTML + '\nLeet speak Translator\n'), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
-
-    // window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n') + '&url=' + encodeURIComponent(location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
-
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak Translator\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
-
   });
 
 };
-
-function str_to_leet(str) {
-  let leet_str = "";
-  for( let ch of str ) {
-    let rand = Math.random() * 100;
-    if( rand > 70 )
-      leet_str += to_leet(ch);
-    else
-      leet_str += ch;
-  }
-  return leet_str;
-}
-
-function to_leet(ch) {
-  ch = ch.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
-    return String.fromCharCode(s.charCodeAt(0) - 65248);
-  });
-  let ch_upper = ch.toUpperCase();
-  if(ch_upper in leet.leet_ch){
-    return leet.leet_ch[ch_upper][Math.floor(Math.random() * leet.leet_ch[ch_upper].length)];
-  } else{
-    return ch;
-  }
-}
