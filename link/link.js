@@ -1,6 +1,6 @@
 window.onload = function() {
   let main_text = document.getElementById("main_text");
-  main_text.innerHTML = str_to_rot('under construction');
+  main_text.innerHTML = str_to_rot('under construction...');
 };
 
 function str_to_random(str) {
