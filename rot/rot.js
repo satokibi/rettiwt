@@ -3,7 +3,7 @@ window.onload = function() {
   rot.rot_text = document.getElementById("rot_text");
   rot.tweet_button = document.getElementById("tweet_button");
 
-  rot.rot_text.innerHTML = str_to_rot("Put your text in here to rot it.");
+  rot.rot_text.innerHTML = str_to_rot("Put your text in here to rotate it.");
 
   document.getElementById("form_rot_button").addEventListener("click", function() {
     let input_str = rot.form._text.value;
@@ -13,7 +13,7 @@ window.onload = function() {
 
 
   rot.tweet_button.addEventListener("click", function() {
-    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(rot.rot_text.innerHTML + '\nleet speak Translator\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(rot.rot_text.innerHTML + '\nRot 180\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
 
   });
 
