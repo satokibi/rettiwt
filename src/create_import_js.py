@@ -26,9 +26,9 @@ def create_import_js(write_file, read_file_path):
 if __name__ == '__main__':
     write_file = 'import.js'
 
-    header_html_file = 'header.html'
-    footer_html_file = 'footer.html'
+    header_file = 'header'
+    footer_file = 'footer'
 
     with open(write_file, mode='w') as wfile:
-        create_import_js(wfile, header_html_file)
-        create_import_js(wfile, footer_html_file)
+        create_import_js(wfile, header_file)
+        create_import_js(wfile, footer_file)
