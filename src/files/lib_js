@@ -113,8 +113,11 @@ function str_to_ligature(str) {
         ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
       }
       else {
+        /*
         ligature_str += ch;
         ligature_str += String.fromCodePoint(0x020, get_ligature_random());
+        */
+        ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
       }
     }
     else{
