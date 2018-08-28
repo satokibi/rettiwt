@@ -114,7 +114,7 @@ function str_to_ligature(str) {
       }
       else {
         ligature_str += ch;
-        ligature_str += String.fromCodePoint(0x00c, get_ligature_random());
+        ligature_str += String.fromCodePoint(0x020, get_ligature_random());
       }
     }
     else{

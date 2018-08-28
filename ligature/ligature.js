@@ -24,8 +24,10 @@ ch.charCodeAt()
 
 String.fromcodepoint(ch.charCodeAt(), ligature1, ligature2);
  
+only pc ?
 0x00c
 document.write(String.fromCodePoint(0x00c, 0x035C));
+
 */
 
 
