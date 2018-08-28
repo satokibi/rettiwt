@@ -1,6 +1,6 @@
 def create_from_html(write_file, read_file_path):
     with open(read_file_path, mode='r') as rfile:
-        wfile.write('function ' + read_file_path.split('/')[-1].split('.')[0] + '() {\n')
+        wfile.write('function ' + read_file_path.split('/')[-1].split('.')[0] + '() {')
         wfile.write("let html = '';")
         pre_flag = False
         while True:
@@ -19,8 +19,8 @@ def create_from_html(write_file, read_file_path):
                 wfile.write("html += '" + line.strip() + "\\n';")
             else:
                 wfile.write("html += '" + line.strip() + "';")
-        wfile.write("document.write(html);\n")
-        wfile.write('}\n\n')
+        wfile.write("document.write(html);")
+        wfile.write('}')
 
 
 def create_from_js(write_file, read_file_path):

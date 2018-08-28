@@ -108,8 +108,14 @@ function str_to_ligature(str) {
   let ligature_str = "";
   for( let ch of str ) {
     let rand = Math.random() * 100;
-    if( rand > 70 ){
-      ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
+    if( rand > 50 ){
+      if(check_half_alphnum(ch)) {
+        ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
+      }
+      else {
+        ligature_str += ch;
+        ligature_str += String.fromCodePoint(0x00c, get_ligature_random());
+      }
     }
     else{
       ligature_str += ch;
@@ -134,4 +140,13 @@ function ligature_test(ch) {
     str += String.fromCodePoint(ch_code, ligature.ligature_ch[i]); 
   }
   return str;
+}
+
+function check_half_alphnum(ch){
+  ch = (ch==null)?"":ch;
+  if(ch.match(/^[A-Za-z0-9]*$/)){
+    return true;
+  }else{
+    return false;
+  }
 }

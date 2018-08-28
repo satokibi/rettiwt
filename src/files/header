@@ -25,6 +25,9 @@
             <a class="nav-link" href="/rettiwt/rot/">Rot</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/rettiwt/ligature/">Ligature</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/rettiwt/link/">Link</a>
           </li>
         </ul>
