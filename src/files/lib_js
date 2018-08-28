@@ -52,6 +52,11 @@ rot.rot_ch = {
 };
 
 
+let ligature = {};
+ligature.ligature_ch = [
+  0x035c, 0x0318, 0x0323, 0x0354, 0x0359, 0x034e, 0x031c, 0x032b, 0x0317,
+  0x034d, 0x035a, 0x0353, 0x035e, 0x031f, 0x0324, 0x0316, 0x0356, 0x0347,
+  0x030d, 0x034b, 0x0300, 0x0346, 0x0313, 0x0305, 0x034a];
 
 function str_to_leet(str) {
   let leet_str = "";
@@ -96,4 +101,37 @@ function to_rot(ch) {
   } else{
     return ch;
   }
+}
+
+
+function str_to_ligature(str) {
+  let ligature_str = "";
+  for( let ch of str ) {
+    let rand = Math.random() * 100;
+    if( rand > 70 ){
+      ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
+    }
+    else{
+      ligature_str += ch;
+    }
+  }
+  return ligature_str;
+}
+
+/* japanese ==> 1,6,13,14,20,23 */
+function get_ligature(num) {
+    return ligature.ligature_ch[num];
+}
+
+function get_ligature_random() {
+    return ligature.ligature_ch[Math.floor(Math.random() * ligature.ligature_ch.length)];
+}
+
+function ligature_test(ch) {
+  let str = "";
+  let ch_code = ch.charCodeAt();
+  for( let i in ligature.ligature_ch ) {
+    str += String.fromCodePoint(ch_code, ligature.ligature_ch[i]); 
+  }
+  return str;
 }

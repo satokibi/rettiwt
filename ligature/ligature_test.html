@@ -1,0 +1,19 @@
+<script src="/rettiwt/src/import.js"></script>
+<script type="text/javascript">
+  let char = 'a';
+  for(let i=0;i<26;i++) {
+    document.write(ligature_test(String.fromCodePoint(char.charCodeAt()+i)));
+    document.write('<br>');
+    if(i==25 && char=='a') {
+      char = 'A';
+      i = -1;
+    }
+  }
+
+  char = 'ぁ';
+  for(let i=0;i<186;i++) {
+    document.write(ligature_test(String.fromCodePoint(char.charCodeAt()+i)));
+    document.write('<br>');
+  }
+  
+</script>
