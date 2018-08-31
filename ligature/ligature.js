@@ -3,7 +3,7 @@ window.onload = function() {
   ligature.ligature_text = document.getElementById("ligature_text");
   ligature.tweet_button = document.getElementById("tweet_button");
   ligature.coppy_button = document.getElementById("coppy_button");
-  ligature.ligature_text.innerHTML = str_to_ligature("Put your text in here to lig it.");
+  ligature.ligature_text.innerHTML = str_to_ligature("Put your text in here to add ligatures.");
   
 
   document.getElementById("form_ligature_button").addEventListener("click", function() {
