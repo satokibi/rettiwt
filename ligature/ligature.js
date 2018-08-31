@@ -12,6 +12,11 @@ window.onload = function() {
   });
 
 
+  document.getElementById("ligature_textarea").addEventListener("onpaste", function() {
+    let input_str = ligature.form._text.value;
+    let ligature_str = str_to_ligature(input_str);
+    ligature.ligature_text.innerHTML = ligature_str;
+  });
   document.getElementById("ligature_textarea").onkeyup = function() {
     let input_str = ligature.form._text.value;
     let ligature_str = str_to_ligature(input_str);
