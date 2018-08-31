@@ -7,9 +7,11 @@ window.onload = function() {
   leet.leet_text.innerHTML = str_to_leet("Put your text in here to leet it.");
 
 
-  document.getElementById("form_leet_button").addEventListener("click", leet_textarea());
-  document.getElementById("leet_textarea").onkeyup = function(){leet_textarea()};
-
+  document.getElementById("leet_textarea").onkeyup = function() {
+    let input_str = leet.form._text.value;
+    let leet_str = str_to_leet(input_str);
+    leet.leet_text.innerHTML = leet_str;
+  };
 
   leet.tweet_button.addEventListener("click", function() {
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(leet.leet_text.innerHTML + '\nleet speak\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
@@ -21,12 +23,6 @@ window.onload = function() {
     range.selectNode(str);
     window.getSelection().addRange(range);
     document.execCommand('copy');
-    alert('coppyしました');
+    alert('coppy');
   });
 };
-
-function leet_textarea() {
-    let input_str = leet.form._text.value;
-    let leet_str = str_to_leet(input_str);
-    leet.leet_text.innerHTML = leet_str;
-}

@@ -108,7 +108,7 @@ function str_to_ligature(str) {
   let ligature_str = "";
   for( let ch of str ) {
     let rand = Math.random() * 100;
-    if( rand > 60 ){
+    if( rand > 50 ){
       if(check_half_alphnum(ch)) {
         ligature_str += String.fromCodePoint(ch.charCodeAt(), get_ligature_random());
       }
