@@ -6,11 +6,9 @@ window.onload = function() {
 
   leet.leet_text.innerHTML = str_to_leet("Put your text in here to leet it.");
 
-  document.getElementById("form_leet_button").addEventListener("click", function() {
-    let input_str = leet.form._text.value;
-    let leet_str = str_to_leet(input_str);
-    leet.leet_text.innerHTML = leet_str;
-  });
+
+  document.getElementById("form_leet_button").addEventListener("click", leet_textarea());
+  document.getElementById("leet_textarea").onkeyup = function(){leet_textarea()};
 
 
   leet.tweet_button.addEventListener("click", function() {
@@ -25,5 +23,10 @@ window.onload = function() {
     document.execCommand('copy');
     alert('coppyしました');
   });
-
 };
+
+function leet_textarea() {
+    let input_str = leet.form._text.value;
+    let leet_str = str_to_leet(input_str);
+    leet.leet_text.innerHTML = leet_str;
+}

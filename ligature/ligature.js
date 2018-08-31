@@ -6,8 +6,12 @@ window.onload = function() {
   ligature.ligature_text.innerHTML = str_to_ligature("Put your text in here to lig it.");
   
 
-  //document.getElementById("form_ligature_button").addEventListener("click", function() {
-  //document.getElementById("ligature_textarea").onchange = function() {
+  document.getElementById("form_ligature_button").addEventListener("click", function() {
+    let ligature_str = str_to_ligature(ligature.ligature_text.innerHTML);
+    ligature.ligature_text.innerHTML = ligature_str;
+  });
+
+
   document.getElementById("ligature_textarea").onkeyup = function() {
     let input_str = ligature.form._text.value;
     let ligature_str = str_to_ligature(input_str);
