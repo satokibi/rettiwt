@@ -28,7 +28,7 @@ window.onload = function() {
     range.selectNode(str);
     window.getSelection().addRange(range);
     document.execCommand('copy');
-    alert('coppyしました');
+    alert('コピーしました');
   });
 };
 
