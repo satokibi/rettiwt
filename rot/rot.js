@@ -2,6 +2,7 @@ window.onload = function() {
   rot.form = document.forms.form_rot;
   rot.rot_text = document.getElementById("rot_text");
   rot.coppy_button = document.getElementById("coppy_button");
+  rot.tweet_button = document.getElementById("tweet_button");
   rot.rot_text.innerHTML = str_to_rot("Put your text in here to rotate it.");
 
   document.getElementById("rot_textarea").onkeyup = function() {
