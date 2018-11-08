@@ -1,0 +1,26 @@
+<!--
+  0901 01:00
+  やっほー
+-->
+<script src="/rettiwt/src/import.js"></script>
+<script src="./deco_char.js"></script>
+<script type="text/javascript">header();</script>
+<div class="container">
+  <h2>Deco char</h2>
+  <p>変な記号を文章にくっつけます</p>
+  <form name="form_ligature">
+    <div class="form-group">
+      <textarea id="ligature_textarea" name="_text" class="form-control" placeholder="Put your text in here." rows="5"></textarea>
+    </div>
+    <button type="button" id="form_ligature_button" class="btn btn-secondary">もっと</button>
+  </form>
+  <pre>
+      |
+      *</pre>
+  <div class="alert alert-secondary" role="alert">
+    <pre id="ligature_text">ligature</pre>
+  </div>
+  <button type="button" id="tweet_button" class="btn btn-primary">ツイート</button>
+  <button type="button" id="coppy_button" class="btn btn-outline-dark">コピー</button>
+</div>
+<script type="text/javascript">footer();</script>
