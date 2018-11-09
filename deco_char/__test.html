@@ -1,5 +1,17 @@
 <script src="/rettiwt/src/import.js"></script>
 <script type="text/javascript">
+ 
+  document.write(String.fromCodePoint(0x041,0x0337));
+  document.write("aiueo");
+  document.write(String.fromCodePoint(0x041,0x0336, 0x0336));
+  document.write("aiueo");
+  document.write(String.fromCodePoint(0x041,0x0336));
+  document.write("aiueo");
+document.write("<br>");
+
+
+
+
   let char = 'a';
   for(let i=0;i<26;i++) {
     document.write(ligature_test(String.fromCodePoint(char.charCodeAt()+i)));
