@@ -24,7 +24,7 @@ window.onload = function() {
   };
 
   ligature.tweet_button.addEventListener("click", function() {
-    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(ligature.ligature_text.innerHTML + '\ndeco char\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(ligature.ligature_text.innerHTML + '\nMarks\n' + location.href), '', 'scrollbars=yes, width=500, height=300, left=100, top=100,');
   });
 
   ligature.coppy_button.addEventListener("click", function() {
