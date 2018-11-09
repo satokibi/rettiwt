@@ -20,5 +20,3 @@ window.onload = function() {
 //   document.write(String.fromCodePoint(ch.codePointAt(), 0x0359));
 //   //document.write("<br>");
 // };
-
-
