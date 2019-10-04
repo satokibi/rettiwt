@@ -4,4 +4,4 @@ rettiwt
 ## Demo
 
 ## url
-https://satokibi.github.io/rettiwt/
+https://yuucu.github.io/rettiwt/
